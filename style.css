@@ -393,3 +393,74 @@ footer a {
 .social-icons a:hover {
     color: #f1c27d; /* Hover effect color */
 }
+
+@media (max-width: 768px) {
+    /*Adjust the navigator*/
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .nav-links li a {
+        font-size: 1em;
+    }
+
+    /*Adjust container*/
+    .container {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    /*Adjust aboutme*/
+    .about-me-content {
+        flex-direction: column;
+    }
+    .about-me-left, .about-me-right {
+        max-width: 100%;
+        margin-right: 0;
+        padding-top: 20px;
+    }
+
+    /* Adjust titles */
+    h2 {
+        font-size: 2em;
+    }
+    p, ul {
+        font-size: 1em;
+    }
+
+    /* Adjust timeline */
+    .timeline-item .timeline-content {
+        width: 100%;
+        margin-left: 20px;
+    }
+    .timeline-item::before {
+        left: -10px;
+    }
+
+    /* Adjust publictions */
+    .publication-list li {
+        font-size: 1em;
+    }
+    .pub-links a {
+        font-size: 0.8em;
+    }
+
+    /* Adjust links */
+    .pub-links a, .copy-button {
+        font-size: 0.9em;
+        padding: 5px 8px;
+    }
+
+    /* Adjust social logos */
+    .social-icons a {
+        font-size: 20px;
+    }
+}
