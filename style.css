@@ -99,6 +99,7 @@ h2 {
     font-size: 2.5em; /* Section title size */
     margin-bottom: 20px;
     color: #ffffff; /* White title color */
+    font-weight: normal;
 }
 
 p, ul {
@@ -136,13 +137,13 @@ a:hover {
     max-width: 40%;
     margin-right: 20px; /* Add space between left and right sides */
     text-align: center;
-    padding-top: 50px; 
+    padding-top: 60px; 
 }
 
 .about-me-right {
     flex: 1 1 55%; /* Right side occupies 55% of the container */
     max-width: 55%;
-    padding-top: 50px; 
+    padding-top: 60px; 
 }
 
 /* Profile picture styles */
@@ -265,20 +266,20 @@ footer a {
 
 /* BibTeX Modal Styles */
 .bibtex-modal {
-    display: none; /* 默认隐藏 */
+    display: none; /* Default hide */
     position: fixed;
-    z-index: 200; /* 确保在其他内容之上 */
+    z-index: 200; /* Show on the first */
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /* 如果内容超出视窗，添加滚动条 */
-    background-color: rgba(0,0,0,0.7); /* 半透明背景 */
+    overflow: auto; /* If over the bound, then use the scroll */
+    background-color: rgba(0,0,0,0.7); /* Transparent background*/
 }
 
 .modal-content {
     background-color: #3f4042;
-    margin: 10% auto; /* 在视窗中间显示 */
+    margin: 10% auto; /* show in the window */
     padding: 20px;
     border: 1px solid #e0a96d;
     width: 80%;
@@ -332,8 +333,8 @@ footer a {
 
 /* Indexed List Styles */
 .indexed-list {
-    list-style: none; /* 移除默认项目符号 */
-    counter-reset: list-counter; /* 初始化计数器 */
+    list-style: none; /* Remove the defaulted*/
+    counter-reset: list-counter; /* Initialize */
     margin-left: 0;
     padding-left: 0;
 }
@@ -341,7 +342,7 @@ footer a {
 .indexed-list li {
     position: relative;
     margin-bottom: 10px;
-    padding-left: 30px; /* 根据需要调整 */
+    padding-left: 30px; /* Adjust if needed */
 }
 
 .indexed-list li::before {
@@ -353,7 +354,6 @@ footer a {
     font-weight: bold;
     color: #e0a96d;
 }
-
 
 /* Custom Square List Styles */
 .custom-square-list {
