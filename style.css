@@ -377,3 +377,19 @@ footer a {
     height: 10px;
     background-color: #e0a96d;
 }
+
+/* Social icon styles */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 24px; /* Adjust icon size */
+    color: #e0a96d; /* Default icon color */
+}
+
+.social-icons a:hover {
+    color: #f1c27d; /* Hover effect color */
+}

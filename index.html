@@ -7,6 +7,8 @@
     <title>Guo Yue - Personal Website</title>
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -40,6 +42,18 @@
                         Department of Mathematics<br>
                         National University of Singapore
                     </p>
+                    <!-- GitHub and Email Icons with Links -->
+                    <div class="social-icons">
+                        <!-- GitHub Icon -->
+                        <a href="https://github.com/GUOYUE-Cynthia" target="_blank">
+                            <i class="fab fa-github"></i> <!-- GitHub Font Awesome Icon -->
+                        </a>
+
+                        <!-- Email Icon -->
+                        <a href="mailto:guoyue@u.nus.edu" target="_blank">
+                            <i class="fas fa-envelope"></i> <!-- Email Font Awesome Icon -->
+                        </a>
+                    </div>
                 </div>
                 <!-- Right Side: About Content -->
                 <div class="about-me-right">
@@ -362,7 +376,7 @@
             });
         });
 
-        // JavaScript 控制展开/收起 iframe
+        // JavaScript show/hide iframe
         function toggleCV() {
         var cvSection = document.getElementById('cv-section');
         var toggleButton = document.getElementById('toggle-button');
