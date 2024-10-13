@@ -136,11 +136,13 @@ a:hover {
     max-width: 40%;
     margin-right: 20px; /* Add space between left and right sides */
     text-align: center;
+    padding-top: 50px; 
 }
 
 .about-me-right {
     flex: 1 1 55%; /* Right side occupies 55% of the container */
     max-width: 55%;
+    padding-top: 50px; 
 }
 
 /* Profile picture styles */
@@ -197,7 +199,9 @@ a:hover {
 }
 
 h3 {
+    font-size: 25px;
     color: #e0a96d; /* Color for timeline headings */
+    margin-top: 10px;
 }
 
 /* Publications Section Styles */
@@ -257,4 +261,119 @@ footer .container {
 footer a {
     color: #e0a96d;
     margin: 0 10px;
+}
+
+/* BibTeX Modal Styles */
+.bibtex-modal {
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 200; /* 确保在其他内容之上 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* 如果内容超出视窗，添加滚动条 */
+    background-color: rgba(0,0,0,0.7); /* 半透明背景 */
+}
+
+.modal-content {
+    background-color: #3f4042;
+    margin: 10% auto; /* 在视窗中间显示 */
+    padding: 20px;
+    border: 1px solid #e0a96d;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+    color: #fff;
+}
+
+.close-button {
+    color: #e0a96d;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #f1c27d;
+}
+
+.bibtex-text {
+    width: 100%;
+    height: 200px;
+    background-color: #192340;
+    color: #fff;
+    border: 1px solid #e0a96d;
+    border-radius: 5px;
+    padding: 10px;
+    resize: none;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.copy-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #e0a96d;
+    border-radius: 5px;
+    color: #e0a96d;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.copy-button:hover {
+    background-color: #e0a96d;
+    color: #192340;
+}
+
+
+/* Indexed List Styles */
+.indexed-list {
+    list-style: none; /* 移除默认项目符号 */
+    counter-reset: list-counter; /* 初始化计数器 */
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.indexed-list li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 30px; /* 根据需要调整 */
+}
+
+.indexed-list li::before {
+    content: counter(list-counter) ". ";
+    counter-increment: list-counter;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: #e0a96d;
+}
+
+
+/* Custom Square List Styles */
+.custom-square-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.custom-square-list li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 25px;
+}
+
+.custom-square-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    background-color: #e0a96d;
 }
