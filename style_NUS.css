@@ -1,7 +1,7 @@
 /* General body and text styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f6f4f7; /* Dark blue background */
+    background-color: #192340; /* Dark blue background */
     color: #fff; /* White text */
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body {
 
 /* Navigation Bar Styles */
 .navbar {
-    background-color: #7f7492; /* Darker background for the navbar */
+    background-color: #0b1227; /* Darker background for the navbar */
     padding: 20px 0;
     width: 100%;
     position: fixed;
@@ -37,7 +37,7 @@ body {
 }
 
 .navbar-name a.active {
-    color: #f7ebc2; /* Highlight color for active name */
+    color: #e0a96d; /* Highlight color for active name */
 }
 
 .nav-links {
@@ -58,23 +58,23 @@ body {
 }
 
 .nav-links li a:hover {
-    color: #f7ebc2; /* Hover effect color */
+    color: #e0a96d; /* Hover effect color */
 }
 
 .nav-links li a.active {
-    color: #f7ebc2; /* Highlight color for active links */
+    color: #e0a96d; /* Highlight color for active links */
 }
 
 /* Section Styles */
 .section {
     padding: 100px 20px 50px 20px; /* Extra top padding to avoid overlap with navbar */
-    background-color: #f7ebc2;
-    color: #4f4f4f;
+    background-color: #0b1227;
+    color: #fff;
     text-align: left;
 }
 
 .alt {
-    background-color: #fffdf5; /* Alternate background color */
+    background-color: #192340; /* Alternate background color */
 }
 
 .container {
@@ -98,7 +98,7 @@ body {
 h2 {
     font-size: 2.5em; /* Section title size */
     margin-bottom: 20px;
-    color: #7f7492; /* White title color */
+    color: #ffffff; /* White title color */
     font-weight: normal;
 }
 
@@ -116,12 +116,12 @@ ul li {
 }
 
 a {
-    color: #7f7492; /* Link color */
+    color: #e0a96d; /* Link color */
     text-decoration: none;
 }
 
 a:hover {
-    color: #f7ebc2; /* Hover color for links */
+    color: #f1c27d; /* Hover color for links */
 }
 
 /* About Me Section Styles */
@@ -172,7 +172,7 @@ a:hover {
 .timeline-item .timeline-icon {
     width: 20px;
     height: 20px;
-    background-color: #7f7492; /* Timeline dot color */
+    background-color: #e0a96d; /* Timeline dot color */
     border-radius: 50%;
     position: absolute;
     left: -10px;
@@ -180,19 +180,19 @@ a:hover {
 }
 
 .timeline-item .timeline-content {
-    background-color: #f7ebc2;
+    background-color: #3f4042;
     padding: 20px;
     border-radius: 10px;
     margin-left: 40px;
     width: calc(100% - 40px);
-    color: #4f4f4f;
+    color: #fff;
 }
 
 .timeline-item::before {
     content: '';
     position: absolute;
     width: 2px;
-    background-color: #7f7492;
+    background-color: #e0a96d;
     top: 10px;
     bottom: 0;
     left: 0;
@@ -201,7 +201,7 @@ a:hover {
 
 h3 {
     font-size: 25px;
-    color: #7f7492; /* Color for timeline headings */
+    color: #e0a96d; /* Color for timeline headings */
     margin-top: 10px;
 }
 
@@ -218,11 +218,11 @@ h3 {
 .publication-list p {
     margin: 0;
     font-size: 1.2em;
-    color: #4f4f4f; /* Gray color for publication titles */
+    color: #b0b0b0; /* Gray color for publication titles */
 }
 
 .publication-list p .author {
-    color: #7f7492; /* Author names in white */
+    color: #ffffff; /* Author names in white */
 }
 
 .pub-links {
@@ -234,17 +234,17 @@ h3 {
     margin-right: 10px;
     padding: 5px 10px;
     background-color: transparent;
-    border: 1px solid #7f7492; /* Gold border for publication links */
+    border: 1px solid #e0a96d; /* Gold border for publication links */
     border-radius: 5px; /* Rounded corners */
-    color: #7f7492; /* Gold text for publication links */
+    color: #e0a96d; /* Gold text for publication links */
     text-decoration: none;
     font-size: 0.9em;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 .pub-links a:hover {
-    background-color: #7f7492; /* Background turns gold on hover */
-    color: #f6f4f7; /* Dark text on hover */
+    background-color: #e0a96d; /* Background turns gold on hover */
+    color: #192340; /* Dark text on hover */
 }
 
 /* Footer Section Styles */
@@ -260,7 +260,7 @@ footer .container {
 }
 
 footer a {
-    color: #7f7492;
+    color: #e0a96d;
     margin: 0 10px;
 }
 
@@ -281,7 +281,7 @@ footer a {
     background-color: #3f4042;
     margin: 10% auto; /* show in the window */
     padding: 20px;
-    border: 1px solid #7f7492;
+    border: 1px solid #e0a96d;
     width: 80%;
     max-width: 600px;
     border-radius: 10px;
@@ -290,7 +290,7 @@ footer a {
 }
 
 .close-button {
-    color: #7f7492;
+    color: #e0a96d;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -298,15 +298,15 @@ footer a {
 }
 
 .close-button:hover {
-    color: #7f7492;
+    color: #f1c27d;
 }
 
 .bibtex-text {
     width: 100%;
     height: 200px;
-    background-color: #f6f4f7;
+    background-color: #192340;
     color: #fff;
-    border: 1px solid #7f7492;
+    border: 1px solid #e0a96d;
     border-radius: 5px;
     padding: 10px;
     resize: none;
@@ -317,17 +317,17 @@ footer a {
 .copy-button {
     padding: 10px 20px;
     background-color: transparent;
-    border: 1px solid #7f7492;
+    border: 1px solid #e0a96d;
     border-radius: 5px;
-    color: #7f7492;
+    color: #e0a96d;
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .copy-button:hover {
-    background-color: #7f7492;
-    color: #f6f4f7;
+    background-color: #e0a96d;
+    color: #192340;
 }
 
 
@@ -352,7 +352,7 @@ footer a {
     left: 0;
     top: 0;
     font-weight: bold;
-    color: #7f7492;
+    color: #e0a96d;
 }
 
 /* Custom Square List Styles */
@@ -375,7 +375,7 @@ footer a {
     top: 6px;
     width: 10px;
     height: 10px;
-    background-color: #7f7492;
+    background-color: #e0a96d;
 }
 
 /* Social icon styles */
@@ -387,7 +387,7 @@ footer a {
     text-decoration: none;
     margin-right: 10px;
     font-size: 24px; /* Adjust icon size */
-    color: #7f7492; /* Default icon color */
+    color: #e0a96d; /* Default icon color */
 }
 
 .social-icons a:hover {
