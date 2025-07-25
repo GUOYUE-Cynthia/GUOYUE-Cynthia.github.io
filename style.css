@@ -147,12 +147,22 @@ a:hover {
 }
 
 /* Profile picture styles */
-.profile-pic {
+/* square */
+
+/* .profile-pic {
     width: 100%;
     height: auto;
-    max-width: 300px; /* Max width for the profile picture */
-    border-radius: 10px; /* Rounded corners */
+    max-width: 300px; 
+    border-radius: 10px; 
     margin-bottom: 20px;
+} */
+
+/* circle  */
+.profile-pic {
+    border-radius: 50%;
+    width: 260px;  
+    height: 260px;
+    object-fit: cover; 
 }
 
 /* Timeline Section Styles */
