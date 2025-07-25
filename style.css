@@ -28,20 +28,39 @@ body {
     padding: 0 20px;
 }
 
+/* Unified Navigation Styles */
 .navbar-name a {
-    font-size: 1.8em; /* Font size for navbar name */
+    font-size: 1.6em;         
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    margin-right: 50px; /* Add space between name and links */
+    font-weight: 500;        
+    transition: color 0.3s ease;
 }
 
-.navbar-name a.active {
-    color: #faf2d7; /* Highlight color for active name */
+.nav-links li a {
+    font-size: 1.2em;         
+    color: white;             
+    text-decoration: none;
+    font-weight: 500;         
+    transition: color 0.3s ease;
 }
 
+/* Spacing */
+.navbar-name a {
+    margin-right: 50px;       /* Space between name and links */
+}
+
+/* Hover and Active States */
+.navbar-name a:hover,
+.navbar-name a.active,
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: #faf2d7;           /* Highlight color */
+}
+
+/* Navigation Link List */
 .nav-links {
-    list-style-type: none; /* Remove default list styles */
+    list-style-type: none;
     display: flex;
     margin: 0;
     padding: 0;
@@ -51,19 +70,6 @@ body {
     margin-right: 20px;
 }
 
-.nav-links li a {
-    color: white; /* Default white text for links */
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.nav-links li a:hover {
-    color: #faf2d7; /* Hover effect color */
-}
-
-.nav-links li a.active {
-    color: #faf2d7; /* Highlight color for active links */
-}
 
 /* Section Styles */
 .section {
@@ -88,11 +94,23 @@ body {
 
 .section-title {
     flex-basis: 20%; /* Title occupies 20% of the width */
-    text-align: left;
+    text-align: center;
 }
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    max-width: 900px; /* 或与你 container 一致 */
+    height: 3px;
+    background-color: #7f7492; /* 与 h2 同色 */
+    margin: 0 auto 30px;
+}
+
 
 .section-content {
     flex-basis: 75%; /* Content occupies 75% of the width */
+    margin:0 auto;
 }
 
 h2 {
@@ -105,6 +123,7 @@ h2 {
 p, ul {
     font-size: 1.2em; /* Paragraph and list item font size */
 }
+
 
 ul {
     list-style-type: none; /* Remove bullet points */
@@ -472,5 +491,9 @@ footer a {
     /* Adjust social logos */
     .social-icons a {
         font-size: 20px;
+    }
+
+    .navbar {
+        position: relative;
     }
 }
