@@ -68,7 +68,7 @@ body {
 /* Section Styles */
 .section {
     padding: 100px 20px 50px 20px; /* Extra top padding to avoid overlap with navbar */
-    background-color: #f7ebc2;
+    background-color: #fffdf5;
     color: #4f4f4f;
     text-align: left;
 }
