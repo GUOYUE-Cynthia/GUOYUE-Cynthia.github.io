@@ -273,7 +273,7 @@ h3 {
 
 .pub-links a:hover {
     background-color: #7f7492; /* Background turns gold on hover */
-    color: #f6f4f7; /* Dark text on hover */
+    color: #faf2d7; /* Dark text on hover */
 }
 
 /* Footer Section Styles */
@@ -356,7 +356,7 @@ footer a {
 
 .copy-button:hover {
     background-color: #7f7492;
-    color: #f6f4f7;
+    color: #faf2d7;
 }
 
 
