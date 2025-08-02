@@ -183,7 +183,6 @@ a:hover {
     height: 260px;
     object-fit: cover; 
 }
-
 /* Timeline Section Styles */
 .timeline {
     max-width: 800px;
@@ -198,34 +197,19 @@ a:hover {
     position: relative;
 }
 
-.timeline-item .timeline-icon {
-    width: 20px;
-    height: 20px;
-    background-color: #7f7492; /* Timeline dot color */
-    border-radius: 50%;
-    position: absolute;
-    left: -10px;
-    top: 0;
-}
-
 .timeline-item .timeline-content {
     background-color: #faf2d7;
     padding: 20px;
     border-radius: 10px;
-    margin-left: 40px;
-    width: calc(100% - 40px);
+    width: 100%;
+    margin-left: 0;
     color: #4f4f4f;
 }
 
+/* Hide the timeline circle and vertical line */
+.timeline-item .timeline-icon,
 .timeline-item::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background-color: #7f7492;
-    top: 10px;
-    bottom: 0;
-    left: 0;
-    margin-left: -1px;
+    display: none;
 }
 
 h3 {
