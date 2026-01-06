@@ -1,22 +1,123 @@
 /* General body and text styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fffdf5; /* Dark blue background */
-    color: #fff; /* White text */
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Navigation Bar Styles */
-.navbar {
-    background-color: #7f7492; /* Darker background for the navbar */
-    padding: 20px 0;
-    width: 100%;
-    position: fixed;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Clean white background */
+    color: #333333; /* Dark gray text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+}
+
+/* Main Wrapper - Two Column Layout */
+.main-wrapper {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* Fixed Left Sidebar */
+.sidebar-left {
+    position: sticky;
     top: 0;
-    left: 0;
-    z-index: 100;
+    width: 320px;
+    min-width: 320px;
+    height: 100vh;
+    padding: 60px 40px;
+    text-align: center;
+    background-color: #fafafa;
+    border-right: 1px solid #e0e0e0;
+    overflow-y: auto;
+}
+
+.sidebar-left .profile-pic {
+    width: 220px;
+    height: 220px;
+}
+
+/* Sidebar Navigation Menu */
+.sidebar-nav {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    margin-bottom: 15px;
+}
+
+.sidebar-nav a {
+    display: block;
+    color: #666666;
+    text-decoration: none;
+    font-size: 1.05em;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.sidebar-nav a:hover {
+    background-color: #f0f0f0;
+    color: #7f7492;
+    transform: translateX(5px);
+}
+
+.sidebar-nav a.active {
+    background-color: #7f7492;
+    color: #ffffff;
+}
+
+/* Main Content Area */
+.main-content {
+    flex: 1;
+    padding: 60px 80px;
+    max-width: 900px;
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 60px;
+}
+
+/* CV Download Button */
+.cv-download-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #7f7492;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 10px rgba(127, 116, 146, 0.2);
+}
+
+.cv-download-btn:hover {
+    background-color: #9b8db0;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(127, 116, 146, 0.3);
+}
+
+.cv-download-btn i {
+    margin-right: 8px;
+}
+
+/* Navigation Bar Styles - Hidden for single page layout */
+.navbar {
+    display: none;
 }
 
 .navbar-container {
@@ -55,7 +156,7 @@ body {
 .navbar-name a.active,
 .nav-links li a:hover,
 .nav-links li a.active {
-    color: #faf2d7;           /* Highlight color */
+    color: #e0e0e0;           /* Light gray highlight */
 }
 
 /* Navigation Link List */
@@ -71,53 +172,14 @@ body {
 }
 
 
-/* Section Styles */
-.section {
-    padding: 100px 20px 50px 20px; /* Extra top padding to avoid overlap with navbar */
-    background-color: #fffdf5;
-    color: #4f4f4f;
-    text-align: left;
-}
-
-.alt {
-    background-color: #fffdf5; /* Alternate background color */
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto; /* Center align */
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 20px; /* Add padding */
-}
-
-.section-title {
-    flex-basis: 20%; /* Title occupies 20% of the width */
-    text-align: center;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 100%;
-    max-width: 900px; /* 或与你 container 一致 */
-    height: 3px;
-    background-color: #7f7492; /* 与 h2 同色 */
-    margin: 0 auto 30px;
-}
-
-
-.section-content {
-    flex-basis: 75%; /* Content occupies 75% of the width */
-    margin:0 auto;
-}
 
 h2 {
     font-size: 2.5em; /* Section title size */
-    margin-bottom: 20px;
-    color: #7f7492; /* White title color */
-    font-weight: normal;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    color: #7f7492; /* Purple title color */
+    font-weight: 600;
+    border-bottom: 2px solid #e0e0e0; /* Slim underline */
 }
 
 p, ul {
@@ -135,87 +197,32 @@ ul li {
 }
 
 a {
-    color: #7f7492; /* Link color */
+    color: #7f7492; /* Purple link color */
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #faf2d7; /* Hover color for links */
-}
-
-/* About Me Section Styles */
-.about-me-content {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-.about-me-left {
-    flex: 1 1 40%; /* Left side occupies 40% of the container */
-    max-width: 40%;
-    margin-right: 20px; /* Add space between left and right sides */
-    text-align: center;
-    padding-top: 60px; 
-}
-
-.about-me-right {
-    flex: 1 1 55%; /* Right side occupies 55% of the container */
-    max-width: 55%;
-    padding-top: 60px; 
+    color: #9b8db0; /* Lighter purple on hover */
 }
 
 /* Profile picture styles */
-/* square */
-
-/* .profile-pic {
-    width: 100%;
-    height: auto;
-    max-width: 300px; 
-    border-radius: 10px; 
-    margin-bottom: 20px;
-} */
-
-/* circle  */
 .profile-pic {
     border-radius: 50%;
-    width: 260px;  
-    height: 260px;
-    object-fit: cover; 
-}
-/* Timeline Section Styles */
-.timeline {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-.timeline-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.timeline-item .timeline-content {
-    background-color: #faf2d7;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    margin-left: 0;
-    color: #4f4f4f;
-}
-
-/* Hide the timeline circle and vertical line */
-.timeline-item .timeline-icon,
-.timeline-item::before {
-    display: none;
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border: 4px solid #7f7492;
+    box-shadow: 0 4px 15px rgba(127, 116, 146, 0.2);
+    margin-bottom: 20px;
 }
 
 h3 {
-    font-size: 25px;
-    color: #7f7492; /* Color for timeline headings */
-    margin-top: 10px;
+    font-size: 1.4em;
+    color: #7f7492; /* Purple for timeline headings */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 /* Publications Section Styles */
@@ -225,17 +232,29 @@ h3 {
 }
 
 .publication-list li {
-    margin-bottom: 20px; /* Space between each publication */
+    margin-bottom: 35px; /* Space between each publication */
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.publication-list li:last-child {
+    border-bottom: none;
 }
 
 .publication-list p {
-    margin: 0;
-    font-size: 1.2em;
-    color: #4f4f4f; /* Gray color for publication titles */
+    margin: 0 0 15px 0;
+    font-size: 1.1em;
+    color: #333333; /* Dark gray for publication text */
+    line-height: 1.7;
 }
 
 .publication-list p .author {
-    color: #7f7492; /* Author names in white */
+    color: #666666; /* Gray for author names */
+}
+
+.publication-list p strong.author {
+    color: #7f7492; /* Purple for your name */
+    font-weight: 600;
 }
 
 .pub-links {
@@ -256,14 +275,14 @@ h3 {
 }
 
 .pub-links a:hover {
-    background-color: #7f7492; /* Background turns gold on hover */
-    color: #faf2d7; /* Dark text on hover */
+    background-color: #7f7492; /* Background turns purple on hover */
+    color: #ffffff; /* White text on hover */
 }
 
 /* Footer Section Styles */
 footer {
-    background-color: #0b1227;
-    padding: 20px;
+    background-color: #7f7492;
+    padding: 30px;
     text-align: center;
 }
 
@@ -273,8 +292,13 @@ footer .container {
 }
 
 footer a {
-    color: #7f7492;
+    color: #ffffff;
     margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e0e0e0;
 }
 
 /* BibTeX Modal Styles */
@@ -291,15 +315,16 @@ footer a {
 }
 
 .modal-content {
-    background-color: #3f4042;
+    background-color: #ffffff;
     margin: 10% auto; /* show in the window */
-    padding: 20px;
-    border: 1px solid #7f7492;
+    padding: 30px;
+    border: 2px solid #7f7492;
     width: 80%;
     max-width: 600px;
     border-radius: 10px;
     position: relative;
-    color: #fff;
+    color: #333333;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 
 .close-button {
@@ -317,14 +342,15 @@ footer a {
 .bibtex-text {
     width: 100%;
     height: 200px;
-    background-color: #f6f4f7;
-    color: #fff;
-    border: 1px solid #7f7492;
+    background-color: #f8f8f8;
+    color: #333333;
+    border: 1px solid #cccccc;
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
     resize: none;
-    font-size: 1em;
+    font-size: 0.95em;
     margin-bottom: 20px;
+    font-family: 'Courier New', monospace;
 }
 
 .copy-button {
@@ -340,7 +366,7 @@ footer a {
 
 .copy-button:hover {
     background-color: #7f7492;
-    color: #faf2d7;
+    color: #ffffff;
 }
 
 
@@ -404,80 +430,89 @@ footer a {
 }
 
 .social-icons a:hover {
-    color: #fbf4de; /* Hover effect color */
+    color: #9b8db0; /* Lighter purple hover effect */
 }
 
-@media (max-width: 768px) {
-    /*Adjust the navigator*/
-    .navbar-container {
+@media (max-width: 968px) {
+    /* Stack sidebar and content vertically on mobile */
+    .main-wrapper {
         flex-direction: column;
-        align-items: flex-start;
     }
-    .nav-links {
-        flex-direction: column;
+
+    .sidebar-left {
+        position: relative;
         width: 100%;
-    }
-    .nav-links li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    .nav-links li a {
-        font-size: 1em;
+        height: auto;
+        padding: 40px 30px;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
     }
 
-    /*Adjust container*/
-    .container {
-        flex-direction: column;
-        padding: 0 10px;
-    }
-
-    /*Adjust aboutme*/
-    .about-me-content {
-        flex-direction: column;
-    }
-    .about-me-left, .about-me-right {
+    .main-content {
+        padding: 40px 30px;
         max-width: 100%;
-        margin-right: 0;
-        padding-top: 20px;
     }
 
     /* Adjust titles */
     h2 {
         font-size: 2em;
     }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
     p, ul {
         font-size: 1em;
     }
 
-    /* Adjust timeline */
-    .timeline-item .timeline-content {
-        width: 100%;
-        margin-left: 20px;
-    }
-    .timeline-item::before {
-        left: -10px;
-    }
-
-    /* Adjust publictions */
-    .publication-list li {
+    /* Adjust publications */
+    .publication-list p {
         font-size: 1em;
     }
+
+    .publication-list li {
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+    }
+
     .pub-links a {
-        font-size: 0.8em;
+        font-size: 0.85em;
+        padding: 8px 12px;
+        margin-bottom: 8px;
     }
 
-    /* Adjust links */
-    .pub-links a, .copy-button {
-        font-size: 0.9em;
-        padding: 5px 8px;
+    /* Adjust CV button */
+    .cv-download-btn {
+        font-size: 1em;
+        padding: 12px 24px;
     }
 
-    /* Adjust social logos */
+    /* Adjust profile picture */
+    .sidebar-left .profile-pic,
+    .profile-pic {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* Adjust social icons */
     .social-icons a {
         font-size: 20px;
     }
 
-    .navbar {
-        position: relative;
+    /* Adjust content sections */
+    .content-section {
+        margin-bottom: 40px;
+    }
+
+    /* Adjust sidebar navigation */
+    .sidebar-nav {
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+
+    .sidebar-nav a {
+        font-size: 1em;
+        padding: 6px 12px;
     }
 }
